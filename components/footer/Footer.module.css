@@ -1,0 +1,191 @@
+.footer {
+  position: relative;
+  background: rgba(33, 32, 32, 0.112);
+  backdrop-filter: blur(10px);
+  color: var(--color-text);
+  padding: 4rem 1rem 2rem;
+  font-family: var(--font-sans);
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.brand p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 40ch;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.linkGroup h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.linkGroup a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  margin: 0.25rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.linkGroup a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.linkGroup a:hover {
+  color: var(--color-accent);
+}
+
+.linkGroup a:hover::after {
+  width: 100%;
+}
+
+/* LinkedIn icon hover effect */
+.linkedin svg {
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.linkedin:hover svg {
+  color: var(--color-accent);
+  transform: scale(1.2);
+}
+
+/* Scroll to top button */
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+  z-index: 100;
+}
+
+.scrollTop:hover {
+  transform: translateY(-3px) scale(1.1);
+  background-color: var(--color-accent-hover);
+}
+
+/* Copyright */
+.copy {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-top: 2rem;
+}
+
+/* Floating particles for effect */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(9, 123, 132, 0.15), transparent 70%);
+  z-index: 0;
+}
+
+.footer::before {
+  width: 150px;
+  height: 150px;
+  top: -40px;
+  left: -40px;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+.footer::after {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: -30px;
+  animation: float 10s ease-in-out infinite alternate-reverse;
+}
+
+/* WhatsApp icon hover effect */
+.whatsapp svg {
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.whatsapp:hover svg {
+  color: #25d366; /* vert WhatsApp officiel */
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-20px) translateX(20px);
+  }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .links {
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .brand {
+    text-align: left;
+  }
+
+  .linkGroup h4 {
+    text-align: left;
+  }
+}

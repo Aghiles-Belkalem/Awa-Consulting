@@ -1,0 +1,116 @@
+.why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  padding: 6rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.header p {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  max-width: 50ch;
+  margin-inline: auto;
+  line-height: 1.6;
+  animation: fadeUp 0.8s ease-out 0.2s forwards;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  animation: fadeUp 0.8s ease-out 0.4s forwards;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(9, 123, 132, 0.1),
+    rgba(11, 123, 173, 0.05)
+  );
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-align: center;
+  cursor: default;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(9, 123, 132, 0.25);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+.card:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+  color: var(--color-accent-hover);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Desktop view ===== */
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card {
+    flex: 1;
+    max-width: 300px;
+  }
+
+  .header {
+    max-width: 900px;
+  }
+}

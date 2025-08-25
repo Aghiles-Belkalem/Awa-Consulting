@@ -1,0 +1,105 @@
+/* ==========================
+   CSS GLOBAL - VARIABLES
+=========================== */
+
+/* Light mode par défaut */
+:root {
+  /* Couleurs */
+  --color-background: #f7f7f7; /* fond doux (pas #fff) */
+  --color-surface: #fafafa; /* surface claire */
+  --color-text: #1c1c1c; /* gris très foncé au lieu de noir pur */
+  --color-text-secondary: #4a4a4a; /* gris intermédiaire */
+  --color-accent: #097b84; /* accent client */
+  --color-accent-hover: #0d929b; /* accent hover */
+  --color-muted: #d6d6d6; /* bordures / séparateurs subtils */
+
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Arial", sans-serif;
+
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem; /* 36px */
+
+  /* Espacements */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+  --space-xxl: 5rem; /* 80px */
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Shadows (subtiles) */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --color-background: #181818; /* gris très sombre, pas noir pur */
+  --color-surface: #222222; /* surface foncée */
+  --color-text: #e6e6e6; /* gris clair, pas blanc pur */
+  --color-text-secondary: #b5b5b5; /* gris moyen */
+  --color-accent: #0aa2ab; /* accent adapté dark */
+  --color-accent-hover: #12b9c3; /* accent hover */
+  --color-muted: #333333; /* séparateurs */
+}
+
+/* ==========================
+   RESET & BASE STYLES
+=========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.3;
+}

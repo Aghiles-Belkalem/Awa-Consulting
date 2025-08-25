@@ -1,0 +1,174 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 2rem;
+  padding: 6rem 1rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(9, 123, 132, 0.2), rgba(11, 123, 173, 0.05)),
+    var(--color-background);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(9, 123, 132, 0.15),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(9, 123, 132, 0.1),
+      transparent 70%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2; /* au-dessus du décor */
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* CTA – blindé contre les styles globaux */
+.ctaButton,
+.ctaButton:visited {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-accent) !important;
+  color: var(--color-surface) !important;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none !important;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(9, 123, 132, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    opacity 0.25s ease;
+  opacity: 1 !important; /* empêche tout fade-out global */
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  background: var(--color-accent-hover) !important;
+  color: var(--color-surface) !important;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(9, 123, 132, 0.45);
+  outline: none;
+}
+
+.ctaButton:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Icône rocket dans le CTA */
+.ctaIcon {
+  font-size: 1.25rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.ctaButton:hover .ctaIcon {
+  transform: translateY(-2px);
+  color: #ffffffcc; /* un léger accent blanc translucide au hover */
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.9s ease-out 0.15s both;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, rgb(8 53 57 / 70%), rgb(11 123 173 / 73%));
+  object-fit: cover;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(9, 123, 132, 0.25);
+}
+
+/* Anim */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    padding: 8rem 4rem;
+    gap: 4rem;
+  }
+  .content {
+    flex: 1;
+  }
+  .imageWrapper {
+    flex: 1;
+    max-width: 600px;
+  }
+  .title {
+    font-size: 3.2rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .ctaButton {
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+  }
+}
