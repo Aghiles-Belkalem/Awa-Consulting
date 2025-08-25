@@ -9,12 +9,12 @@ import Header from "@/components/header/Header";
 export default function Home() {
   return (
     <>
-      <Header id="/" />
-      <Hero id="hero" />
-      <WhyChooseUs id="about" />
-      <Process id="process" />
-      <Testimonials id="portfolio" />
-      <CTAContact id="contact" />
+      <Header />
+      <Hero />
+      <WhyChooseUs />
+      <Process />
+      <Testimonials />
+      <CTAContact />
       <Footer />
     </>
   );
