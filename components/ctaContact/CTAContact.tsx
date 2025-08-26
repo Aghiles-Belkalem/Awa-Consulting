@@ -9,13 +9,14 @@ export default function ContactForm() {
         <h2>Contactez-nous</h2>
         <p>
           Vous avez un projet en tête ? Échangeons et concrétisons vos idées
-          ensemble. Remplissez le formulaire ci-dessous.
+          ensemble. Remplissez le formulaire ci-dessous. Ou contactez moi sur
+          WhatsApp.
         </p>
       </div>
 
       <form
         className={styles.form}
-        action="https://formsubmit.co/YOUR_EMAIL_HERE"
+        action="https://formsubmit.co/paulinemarent221@gmail.com"
         method="POST"
       >
         <input
