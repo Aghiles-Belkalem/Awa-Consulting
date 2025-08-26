@@ -9,9 +9,9 @@ export default function Hero() {
           Votre entreprise, de A à Z, sans stress
         </h1>
         <p className={styles.subtitle}>
-          Je m’occupe de toutes vos démarches juridiques, protection de marque
-          et lancement digital. Concentrez-vous sur votre projet, je gère tout
-          le reste.
+          Votre projet devient officiel. Je gère toutes les formalités
+          juridiques et administratives, vous concentrez votre énergie sur le
+          lancement.
         </p>
 
         {/* Remplace "btn btn-primary" par la classe du module */}
@@ -28,8 +28,8 @@ export default function Hero() {
 
       <figure className={styles.imageWrapper}>
         <img
-          src="/logo-transparent-svg.svg"
-          alt="Illustration futuriste de création d'entreprise"
+          src="/images/1000005918.jpg"
+          alt="Illustration Logo awa consulting by pauline"
           className={styles.image}
         />
       </figure>

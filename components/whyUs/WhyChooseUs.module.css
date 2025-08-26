@@ -11,6 +11,13 @@
   overflow: hidden;
 }
 
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .header h2 {
   font-size: 2.25rem;
   font-weight: 800;
@@ -28,6 +35,23 @@
   animation: fadeUp 0.8s ease-out 0.2s forwards;
 }
 
+/* Photo de la fondatrice */
+.photoWrapper {
+  margin-top: 2rem;
+  background-color: var(--color-accent); /* vert du site */
+  padding: 0.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.photo {
+  display: block;
+  width: 200px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+/* Cards */
 .cards {
   display: flex;
   flex-direction: column;
@@ -99,6 +123,22 @@
 
 /* ===== Desktop view ===== */
 @media (min-width: 768px) {
+  .headerWrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    text-align: left;
+  }
+
+  .header {
+    max-width: 600px;
+  }
+
+  .photoWrapper {
+    margin-top: 0;
+  }
+
   .cards {
     flex-direction: row;
     justify-content: center;
@@ -108,9 +148,5 @@
   .card {
     flex: 1;
     max-width: 300px;
-  }
-
-  .header {
-    max-width: 900px;
   }
 }
