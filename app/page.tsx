@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     images: [
       {
-        url: "https://awaconsultinggroup.com/images/og-awa.jpg", // ✅ URL absolue
+        url: "https://awaconsultinggroup.com/images/Logo.OG-v2.jpg", // ✅ URL absolue
         width: 1200,
         height: 630,
         alt: "AWA Consulting - Conseil Premium",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "AWA Consulting",
     description:
       "Conseil premium pour créateurs et dirigeants d’entreprise. Coaching, stratégie et accompagnement sur-mesure.",
-    images: ["https://awaconsultinggroup.com/images/og-awa.jpg"], // ✅ URL absolue
+    images: ["https://awaconsultinggroup.com/images/Logo.OG-v2.jpg"], // ✅ URL absolue
     site: "@awa_consulting", // à compléter si compte Twitter existant
     creator: "@awa_consulting",
   },

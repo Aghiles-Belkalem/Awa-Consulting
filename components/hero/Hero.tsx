@@ -28,7 +28,7 @@ export default function Hero() {
 
       <figure className={styles.imageWrapper}>
         <img
-          src="/images/1000005918.jpg"
+          src="/images/Logo.OG-v2.jpg"
           alt="Illustration Logo awa consulting by pauline"
           className={styles.image}
         />

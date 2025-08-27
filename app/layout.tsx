@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       {
         // ❌ avant : "/images/1000005918.jpg"
         // ✅ après : URL absolue
-        url: "https://awaconsultinggroup.com/images/1000005918.jpg",
+        url: "https://awaconsultinggroup.com/images/Logo.OG-v2.jpg",
         width: 1200,
         height: 630,
         alt: "AWA Consulting - Accompagnement haut de gamme",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "AWA Consulting accompagne les entrepreneurs et créateurs d'entreprise dans leurs projets avec expertise, conseils personnalisés et solutions sur mesure.",
     // ❌ avant : ["/images/og-home.jpg"]
     // ✅ après : URL absolue
-    images: ["https://awaconsultinggroup.com/images/1000005918.jpg"],
+    images: ["https://awaconsultinggroup.com/images/Logo.OG-v2.jpg"],
     site: "@awa_consulting", // à garder si tu crées un compte X/Twitter
     creator: "@awa_consulting",
   },
