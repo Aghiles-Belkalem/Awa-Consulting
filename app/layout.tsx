@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "formation",
     "business plan",
   ],
-  authors: [{ name: "Pauline Marent", url: "https://awa-consulting.fr" }],
+  authors: [{ name: "Pauline Marent", url: "https://awaconsultinggroup.com" }],
   creator: "Pauline Marent",
   publisher: "AWA Consulting",
   applicationName: "AWA Consulting",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
       "AWA Consulting – Accompagnement haut de gamme pour créateurs d'entreprise",
     description:
       "AWA Consulting accompagne les entrepreneurs et créateurs d'entreprise dans leurs projets avec expertise, conseils personnalisés et solutions sur mesure.",
-    url: "https://awa-consulting.fr",
+    url: "https://awaconsultinggroup.com",
     siteName: "AWA Consulting",
     type: "website",
     locale: "fr_FR",
     images: [
       {
-        url: "/images/og-home.jpg", // à remplacer par une image stylée
+        url: "/images/1000005918.jpg", // à remplacer par une image stylée
         width: 1200,
         height: 630,
         alt: "AWA Consulting - Accompagnement haut de gamme",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     site: "@awa_consulting", // si tu as un compte Twitter
     creator: "@awa_consulting",
   },
-  metadataBase: new URL("https://awa-consulting.fr"),
+  metadataBase: new URL("https://awaconsultinggroup.com"),
 };
 
 export default function RootLayout({

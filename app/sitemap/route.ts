@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = "https://awa-consulting.fr";
+  const baseUrl = "https://awaconsultinggroup.com";
 
   const pages = [
     {

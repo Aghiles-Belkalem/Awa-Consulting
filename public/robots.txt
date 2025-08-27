@@ -3,5 +3,5 @@ Disallow: /api/
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://awa-consulting.fr/sitemap.xml
-Host: https://awa-consulting.fr
+Sitemap: https://awaconsultinggroup.com/sitemap.xml
+Host: https://awaconsultinggroup.com

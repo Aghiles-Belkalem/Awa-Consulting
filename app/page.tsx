@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "AWA Consulting - Conseil & Stratégie Premium",
     description:
       "Transformez vos idées en succès avec AWA Consulting. Un accompagnement haut de gamme pour les entrepreneurs ambitieux.",
-    url: "https://awa-consulting.fr",
+    url: "https://awaconsultinggroup.com",
     siteName: "AWA Consulting",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "AWA Consulting",
     description:
       "Conseil premium pour créateurs et dirigeants d’entreprise. Coaching, stratégie et accompagnement sur-mesure.",
-    images: ["/images/og-awa.jpg"],
+    images: ["/images/1000005918.jpg"],
   },
   robots: {
     index: true,
