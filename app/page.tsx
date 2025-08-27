@@ -25,28 +25,31 @@ export const metadata: Metadata = {
       "Transformez vos idées en succès avec AWA Consulting. Un accompagnement haut de gamme pour les entrepreneurs ambitieux.",
     url: "https://awaconsultinggroup.com",
     siteName: "AWA Consulting",
+    type: "website",
+    locale: "fr_FR",
     images: [
       {
-        url: "/images/og-awa.jpg", // remplace par une image stylée pour le partage
+        url: "https://awaconsultinggroup.com/images/og-awa.jpg", // ✅ URL absolue
         width: 1200,
         height: 630,
         alt: "AWA Consulting - Conseil Premium",
       },
     ],
-    locale: "fr_FR",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "AWA Consulting",
     description:
       "Conseil premium pour créateurs et dirigeants d’entreprise. Coaching, stratégie et accompagnement sur-mesure.",
-    images: ["/images/1000005918.jpg"],
+    images: ["https://awaconsultinggroup.com/images/og-awa.jpg"], // ✅ URL absolue
+    site: "@awa_consulting", // à compléter si compte Twitter existant
+    creator: "@awa_consulting",
   },
   robots: {
     index: true,
     follow: true,
   },
+  metadataBase: new URL("https://awaconsultinggroup.com"), // ✅ base URL
 };
 
 export default function Home() {
