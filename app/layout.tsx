@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// ✅ Metadata corrigé pour OG & Twitter (URL absolues obligatoires)
 export const metadata: Metadata = {
   title:
     "AWA Consulting – Accompagnement haut de gamme pour créateurs d'entreprise",
@@ -53,7 +54,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     images: [
       {
-        url: "/images/1000005918.jpg", // à remplacer par une image stylée
+        // ❌ avant : "/images/1000005918.jpg"
+        // ✅ après : URL absolue
+        url: "https://awaconsultinggroup.com/images/1000005918.jpg",
         width: 1200,
         height: 630,
         alt: "AWA Consulting - Accompagnement haut de gamme",
@@ -66,8 +69,10 @@ export const metadata: Metadata = {
       "AWA Consulting – Accompagnement haut de gamme pour créateurs d'entreprise",
     description:
       "AWA Consulting accompagne les entrepreneurs et créateurs d'entreprise dans leurs projets avec expertise, conseils personnalisés et solutions sur mesure.",
-    images: ["/images/og-home.jpg"],
-    site: "@awa_consulting", // si tu as un compte Twitter
+    // ❌ avant : ["/images/og-home.jpg"]
+    // ✅ après : URL absolue
+    images: ["https://awaconsultinggroup.com/images/1000005918.jpg"],
+    site: "@awa_consulting", // à garder si tu crées un compte X/Twitter
     creator: "@awa_consulting",
   },
   metadataBase: new URL("https://awaconsultinggroup.com"),
@@ -86,6 +91,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, color-scheme=light dark"
         />
+        {/* ✅ favicon et icônes restent en chemin relatif car elles sont servies en local depuis /public */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
