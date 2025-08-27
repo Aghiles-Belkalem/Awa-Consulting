@@ -1,8 +1,6 @@
-// app/sitemap.ts
 export async function GET() {
   const baseUrl = "https://awa-consulting.fr";
 
-  // Liste statique des pages pour l'instant, avec date de dernière modification
   const pages = [
     {
       url: "/",
